@@ -1,41 +1,36 @@
-// Vulnerability of the Week - Slideshow structure
+// Sensibilisation RGPD (30 minutes) - Slideshow structure
+// Toutes les slides sont sourcées : la référence est le site de la CNIL (voir cnil-sources.ts)
 
-// SQL Injection
-import SqlInjection01IdentityCard from "@/components/slides/vulnerabilities/sql-injection/01-IdentityCard";
-import SqlInjection02AttackPart1 from "@/components/slides/vulnerabilities/sql-injection/02-AttackPart1";
-import SqlInjection02AttackPart2 from "@/components/slides/vulnerabilities/sql-injection/02-AttackPart2";
-import SqlInjection02Interactive from "@/components/slides/vulnerabilities/sql-injection/02-Interactive";
-import SqlInjection03CodeComparisonDjango from "@/components/slides/vulnerabilities/sql-injection/03-CodeComparisonDjango";
-import SqlInjection04CodeComparisonJS from "@/components/slides/vulnerabilities/sql-injection/04-CodeComparisonJS";
-import SqlInjection05Principles from "@/components/slides/vulnerabilities/sql-injection/05-Principles";
-import SqlInjection06CodeComparisonRails from "@/components/slides/vulnerabilities/sql-injection/06-CodeComparisonRails";
+// Introduction
+import Intro01Title from "@/components/slides/rgpd/introduction/01-Title";
+import Intro02WhyRgpd from "@/components/slides/rgpd/introduction/02-WhyRgpd";
 
-// Open Redirect
-import OpenRedirect01IdentityCard from "@/components/slides/vulnerabilities/open-redirect/01-IdentityCard";
-import OpenRedirect02AttackPart1 from "@/components/slides/vulnerabilities/open-redirect/02-AttackPart1";
-import OpenRedirect02Interactive from "@/components/slides/vulnerabilities/open-redirect/02-Interactive";
-import OpenRedirect03CodeComparisonFlask from "@/components/slides/vulnerabilities/open-redirect/03-CodeComparisonFlask";
-import OpenRedirect04CodeComparisonExpress from "@/components/slides/vulnerabilities/open-redirect/04-CodeComparisonExpress";
-import OpenRedirect05Principles from "@/components/slides/vulnerabilities/open-redirect/05-Principles";
+// Donnée personnelle
+import Dp01Definition from "@/components/slides/rgpd/donnee-personnelle/01-Definition";
+import Dp02Quiz from "@/components/slides/rgpd/donnee-personnelle/02-Quiz";
+import Dp03Sensitive from "@/components/slides/rgpd/donnee-personnelle/03-SensitiveAndPseudonymisation";
 
-// IDOR / BOLA
-import Idor01IdentityCard from "@/components/slides/vulnerabilities/idor/01-IdentityCard";
-import Idor02AttackPart1 from "@/components/slides/vulnerabilities/idor/02-AttackPart1";
-import Idor03CodeComparisonNextJS from "@/components/slides/vulnerabilities/idor/03-CodeComparisonExpress";
-import Idor04CodeComparisonDjango from "@/components/slides/vulnerabilities/idor/04-CodeComparisonDjango";
-import Idor05CodeComparisonRails from "@/components/slides/vulnerabilities/idor/05-CodeComparisonRails";
-import Idor06Principles from "@/components/slides/vulnerabilities/idor/05-Principles";
-import IdorAccessControlModels from "@/components/slides/vulnerabilities/idor/06-AccessControlModels";
-import IdorChooseAccessModel from "@/components/slides/vulnerabilities/idor/07-ChooseAccessModel";
+// Responsable de traitement
+import Rt01Definition from "@/components/slides/rgpd/responsable-traitement/01-Definition";
+import Rt02Roles from "@/components/slides/rgpd/responsable-traitement/02-Roles";
 
-// XSS
-import Xss01IdentityCard from "@/components/slides/vulnerabilities/xss/01-IdentityCard";
-import Xss02AttackPart1 from "@/components/slides/vulnerabilities/xss/02-AttackPart1";
-import Xss02bStoredXSSDemo from "@/components/slides/vulnerabilities/xss/02b-StoredXSSDemo";
-import Xss03CodeComparisonReact from "@/components/slides/vulnerabilities/xss/03-CodeComparisonReact";
-import Xss04CodeComparisonDjango from "@/components/slides/vulnerabilities/xss/04-CodeComparisonDjango";
-import Xss05CodeComparisonExpress from "@/components/slides/vulnerabilities/xss/05-CodeComparisonExpress";
-import Xss06Principles from "@/components/slides/vulnerabilities/xss/06-Principles";
+// Durée de conservation
+import Dc01Principle from "@/components/slides/rgpd/duree-conservation/01-Principle";
+import Dc02InPractice from "@/components/slides/rgpd/duree-conservation/02-InPractice";
+
+// Droits d'accès et de rectification
+import Droits01Access from "@/components/slides/rgpd/droits/01-Access";
+import Droits02Rectification from "@/components/slides/rgpd/droits/02-Rectification";
+import Droits03RequestProcess from "@/components/slides/rgpd/droits/03-RequestProcess";
+
+// Grands principes
+import Principes01Article5 from "@/components/slides/rgpd/principes/01-Article5";
+import Principes02Minimisation from "@/components/slides/rgpd/principes/02-Minimisation";
+import Principes03FinaliteBaseLegale from "@/components/slides/rgpd/principes/03-FinaliteBaseLegale";
+
+// Conclusion
+import Conclusion01FinalQuiz from "@/components/slides/rgpd/conclusion/01-FinalQuiz";
+import Conclusion02KeyTakeaways from "@/components/slides/rgpd/conclusion/02-KeyTakeaways";
 
 export interface SlideData {
   id: string;
@@ -54,214 +49,73 @@ export interface ChapterData {
 
 // Define your chapters/modules here
 export const chapters: ChapterData[] = [
-  { 
-    id: 1, 
-    title: "SQL Injection", 
-    description: "Injection de requêtes SQL malveillantes" 
+  {
+    id: 1,
+    title: "Introduction",
+    description: "Le RGPD, de quoi parle-t-on ?",
   },
-  { 
-    id: 2, 
-    title: "Open Redirect", 
-    description: "Redirection non validée vers des sites malveillants" 
+  {
+    id: 2,
+    title: "Donnée personnelle",
+    description: "Qu'est-ce qu'une donnée personnelle ?",
   },
-  { 
-    id: 3, 
-    title: "IDOR / BOLA", 
-    description: "Accès non autorisé aux ressources via manipulation d'ID" 
+  {
+    id: 3,
+    title: "Responsable de traitement",
+    description: "Qui décide du pourquoi et du comment ?",
   },
-  { 
-    id: 4, 
-    title: "XSS", 
-    description: "Cross-Site Scripting - Injection de scripts malveillants" 
+  {
+    id: 4,
+    title: "Durée de conservation",
+    description: "Combien de temps conserver les données ?",
   },
-  // Add more vulnerabilities here:
-  // { id: 5, title: "CSRF", description: "Cross-Site Request Forgery" },
+  {
+    id: 5,
+    title: "Accès et rectification",
+    description: "Les droits des personnes sur leurs données",
+  },
+  {
+    id: 6,
+    title: "Grands principes",
+    description: "Minimisation, finalité, base légale…",
+  },
+  {
+    id: 7,
+    title: "Conclusion",
+    description: "Quiz final et points clés",
+  },
 ];
 
 // Define your slides here
 export const slides: SlideData[] = [
-  // SQL Injection
-  { 
-    id: "sqli-identity", 
-    component: SqlInjection01IdentityCard, 
-    title: "Fiche d'Identité", 
-    chapterId: 1 
-  },
-  { 
-    id: "sqli-attack-1", 
-    component: SqlInjection02AttackPart1, 
-    title: "Attaques : Bypass & Extraction", 
-    chapterId: 1 
-  },
-  { 
-    id: "sqli-attack-2", 
-    component: SqlInjection02AttackPart2, 
-    title: "Attaque : Destruction", 
-    chapterId: 1 
-  },
-  { 
-    id: "sqli-interactive", 
-    component: SqlInjection02Interactive, 
-    title: "Démo Interactive", 
-    chapterId: 1 
-  },
-  { 
-    id: "sqli-code-django", 
-    component: SqlInjection03CodeComparisonDjango, 
-    title: "Comparaison : Python Django", 
-    chapterId: 1 
-  },
-  { 
-    id: "sqli-code-js", 
-    component: SqlInjection04CodeComparisonJS, 
-    title: "Comparaison : JavaScript", 
-    chapterId: 1 
-  },
-  { 
-    id: "sqli-code-rails", 
-    component: SqlInjection06CodeComparisonRails, 
-    title: "Comparaison : Ruby on Rails", 
-    chapterId: 1 
-  },
-  { 
-    id: "sqli-principles", 
-    component: SqlInjection05Principles, 
-    title: "Principes & OWASP", 
-    chapterId: 1 
-  },
-  
-  // Open Redirect
-  { 
-    id: "redirect-identity", 
-    component: OpenRedirect01IdentityCard, 
-    title: "Fiche d'Identité", 
-    chapterId: 2 
-  },
-  { 
-    id: "redirect-attack-1", 
-    component: OpenRedirect02AttackPart1, 
-    title: "Attaques : Phishing & Bypass", 
-    chapterId: 2 
-  },
-  { 
-    id: "redirect-interactive", 
-    component: OpenRedirect02Interactive, 
-    title: "Démo Interactive", 
-    chapterId: 2 
-  },
-  { 
-    id: "redirect-code-flask", 
-    component: OpenRedirect03CodeComparisonFlask, 
-    title: "Comparaison : Python Flask", 
-    chapterId: 2 
-  },
-  { 
-    id: "redirect-code-express", 
-    component: OpenRedirect04CodeComparisonExpress, 
-    title: "Comparaison : JavaScript Express", 
-    chapterId: 2 
-  },
-  { 
-    id: "redirect-principles", 
-    component: OpenRedirect05Principles, 
-    title: "Principes & OWASP", 
-    chapterId: 2 
-  },
-  
-  // IDOR / BOLA
-  { 
-    id: "idor-identity", 
-    component: Idor01IdentityCard, 
-    title: "Fiche d'Identité", 
-    chapterId: 3 
-  },
-  { 
-    id: "idor-attack-1", 
-    component: Idor02AttackPart1, 
-    title: "Attaques : Lecture & Modification", 
-    chapterId: 3 
-  },
-  { 
-    id: "idor-code-nextjs", 
-    component: Idor03CodeComparisonNextJS, 
-    title: "Comparaison : Next.js", 
-    chapterId: 3 
-  },
-  { 
-    id: "idor-code-django", 
-    component: Idor04CodeComparisonDjango, 
-    title: "Comparaison : Python Django", 
-    chapterId: 3 
-  },
-  { 
-    id: "idor-code-rails", 
-    component: Idor05CodeComparisonRails, 
-    title: "Comparaison : Ruby on Rails", 
-    chapterId: 3 
-  },
-  { 
-    id: "idor-access-models", 
-    component: IdorAccessControlModels, 
-    title: "Modèles de Contrôle d'Accès", 
-    chapterId: 3 
-  },
-  { 
-    id: "idor-choose-model", 
-    component: IdorChooseAccessModel, 
-    title: "Quel modèle choisir ?", 
-    chapterId: 3 
-  },
-  { 
-    id: "idor-principles", 
-    component: Idor06Principles, 
-    title: "Principes & OWASP", 
-    chapterId: 3 
-  },
-  
-  // XSS
-  { 
-    id: "xss-identity", 
-    component: Xss01IdentityCard, 
-    title: "Fiche d'Identité", 
-    chapterId: 4 
-  },
-  { 
-    id: "xss-attack-1", 
-    component: Xss02AttackPart1, 
-    title: "Attaques : Vol de session & Phishing", 
-    chapterId: 4 
-  },
-  { 
-    id: "xss-stored-demo", 
-    component: Xss02bStoredXSSDemo, 
-    title: "Démo : Stored XSS", 
-    chapterId: 4 
-  },
-  { 
-    id: "xss-code-react", 
-    component: Xss03CodeComparisonReact, 
-    title: "Comparaison : React", 
-    chapterId: 4 
-  },
-  { 
-    id: "xss-code-django", 
-    component: Xss04CodeComparisonDjango, 
-    title: "Comparaison : Python Django", 
-    chapterId: 4 
-  },
-  { 
-    id: "xss-code-express", 
-    component: Xss05CodeComparisonExpress, 
-    title: "Comparaison : JavaScript Express", 
-    chapterId: 4 
-  },
-  { 
-    id: "xss-principles", 
-    component: Xss06Principles, 
-    title: "Principes & OWASP", 
-    chapterId: 4 
-  },
-  
-  // Add more vulnerabilities here following the same pattern:
-  // CSRF slides...
+  // Introduction
+  { id: "intro-title", component: Intro01Title, title: "Sensibilisation RGPD", chapterId: 1 },
+  { id: "intro-rgpd", component: Intro02WhyRgpd, title: "Le RGPD, de quoi parle-t-on ?", chapterId: 1 },
+
+  // Donnée personnelle
+  { id: "dp-definition", component: Dp01Definition, title: "Définition", chapterId: 2 },
+  { id: "dp-quiz", component: Dp02Quiz, title: "Quiz : donnée personnelle ou pas ?", chapterId: 2 },
+  { id: "dp-sensibles", component: Dp03Sensitive, title: "Données sensibles & pseudonymisation", chapterId: 2 },
+
+  // Responsable de traitement
+  { id: "rt-definition", component: Rt01Definition, title: "Traitement & responsable", chapterId: 3 },
+  { id: "rt-roles", component: Rt02Roles, title: "Rôles des acteurs & DPO", chapterId: 3 },
+
+  // Durée de conservation
+  { id: "dc-principe", component: Dc01Principle, title: "Principe & cycle de vie", chapterId: 4 },
+  { id: "dc-pratique", component: Dc02InPractice, title: "En pratique", chapterId: 4 },
+
+  // Droits d'accès et de rectification
+  { id: "droits-acces", component: Droits01Access, title: "Le droit d'accès", chapterId: 5 },
+  { id: "droits-rectification", component: Droits02Rectification, title: "Le droit de rectification", chapterId: 5 },
+  { id: "droits-situation", component: Droits03RequestProcess, title: "Mise en situation", chapterId: 5 },
+
+  // Grands principes
+  { id: "principes-article5", component: Principes01Article5, title: "Les principes de l'article 5", chapterId: 6 },
+  { id: "principes-minimisation", component: Principes02Minimisation, title: "Focus : la minimisation", chapterId: 6 },
+  { id: "principes-finalite", component: Principes03FinaliteBaseLegale, title: "Finalité & base légale", chapterId: 6 },
+
+  // Conclusion
+  { id: "conclusion-quiz", component: Conclusion01FinalQuiz, title: "Quiz final", chapterId: 7 },
+  { id: "conclusion-retenir", component: Conclusion02KeyTakeaways, title: "À retenir & ressources", chapterId: 7 },
 ];

@@ -70,7 +70,7 @@ const PrintView = () => {
               <p className="cover-description">{module.description}</p>
             )}
             <div className="cover-meta">
-              <p>Formation Cybersécurité</p>
+              <p>Sensibilisation RGPD</p>
               <p>Date d'export : {new Date().toLocaleDateString('fr-FR', { 
                 day: 'numeric', 
                 month: 'long', 
