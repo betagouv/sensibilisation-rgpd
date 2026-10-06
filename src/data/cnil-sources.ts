@@ -80,6 +80,10 @@ export const CNIL = {
     label: "RGPD – Chapitre II, article 5 (cnil.fr)",
     url: "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2",
   },
+  liceite: {
+    label: "CNIL – La licéité du traitement : l'essentiel sur les bases légales",
+    url: "https://www.cnil.fr/fr/les-bases-legales/liceite-essentiel-sur-les-bases-legales",
+  },
   basesLegales: {
     label: "CNIL – Les bases légales",
     url: "https://www.cnil.fr/fr/les-bases-legales",
