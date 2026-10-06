@@ -84,6 +84,34 @@ export const CNIL = {
     label: "CNIL – La licéité du traitement : l'essentiel sur les bases légales",
     url: "https://www.cnil.fr/fr/les-bases-legales/liceite-essentiel-sur-les-bases-legales",
   },
+  choisirBaseLegale: {
+    label: "CNIL – Comment choisir la base légale ? Cas pratiques",
+    url: "https://www.cnil.fr/fr/les-bases-legales/choisir-base-legale",
+  },
+  baseConsentement: {
+    label: "CNIL – Le consentement",
+    url: "https://www.cnil.fr/fr/les-bases-legales/consentement",
+  },
+  baseContrat: {
+    label: "CNIL – Le contrat",
+    url: "https://www.cnil.fr/fr/les-bases-legales/contrat",
+  },
+  baseObligationLegale: {
+    label: "CNIL – L'obligation légale",
+    url: "https://www.cnil.fr/fr/les-bases-legales/obligation-legale",
+  },
+  baseMissionInteretPublic: {
+    label: "CNIL – La mission d'intérêt public",
+    url: "https://www.cnil.fr/fr/les-bases-legales/mission-interet-public",
+  },
+  baseInteretLegitime: {
+    label: "CNIL – L'intérêt légitime",
+    url: "https://www.cnil.fr/fr/les-bases-legales/interet-legitime",
+  },
+  devBasesLegales: {
+    label: "Guide RGPD du développeur – Prendre en compte les bases légales",
+    url: "https://www.cnil.fr/fr/prendre-en-compte-les-bases-legales-dans-limplementation-technique",
+  },
   basesLegales: {
     label: "CNIL – Les bases légales",
     url: "https://www.cnil.fr/fr/les-bases-legales",
